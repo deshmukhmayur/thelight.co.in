@@ -17,9 +17,29 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<style>
+		body {
+			background: #111;
+		}
+		body::-webkit-scrollbar {
+		    width: .5rem;
+				overflow:visible;
+		}
+
+		body::-webkit-scrollbar-track {
+		    background: rgba(255,255,255,0);
+		}
+
+		body::-webkit-scrollbar-thumb {
+		  background-color: rgba(255,255,255,0.7);
+			border-radius: 0.25rem;
+		  /*outline: 1px solid slategrey;*/
+		}
+		</style>
 	</head>
 	<body>
-
+		<canvas style="position:fixed;top:0;bottom:0;z-index:-1;"></canvas>
 		<!-- Header -->
 			<section id="header">
 				<header>
@@ -27,7 +47,7 @@
 					<p>Will shine soon in a phone near you!!</p>
 				</header>
 				<footer>
-					<a href="#banner" class="button style2 scrolly-middle">Scroll for more info</a>
+					<a href="#banner" class="button style2 scrolly-middle">Know more</a>
 				</footer>
 			</section>
 
@@ -41,7 +61,7 @@
 					It teaches people to transcend and learn how to lead an excellent lifestyle.
 				</p>
 				<footer>
-					<a href="#first" class="button style2 scrolly">Scroll for more info</a>
+					<a href="#first" class="button style2 scrolly">Even more</a>
 				</footer>
 			</section>
 
@@ -304,6 +324,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/bg-anim.js"></script>
 
 	</body>
 </html>
