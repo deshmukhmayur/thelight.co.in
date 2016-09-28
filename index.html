@@ -7,6 +7,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
 		<title>The Light is Coming soon</title>
 		<meta name="copyright" content="" />
 		<meta author="Abhijeet Sharma" />
@@ -20,11 +21,34 @@
 
 		<style>
 		body {
-			background: #111;
+			background-image: url("images/low_poly_background.jpg") !important;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+	    background-size: auto 200%;
 		}
-		body::-webkit-scrollbar {
-		    width: .5rem;
-				overflow:visible;
+
+		a {
+			color: #1abc9c;
+		}
+		#banner {
+			background: #1abc9c url("images/banner.svg") bottom center no-repeat;
+		}
+		#banner .button {
+			color: #1abc9c;
+		}
+		input[type="submit"] {
+			background: #1abc9c;
+		}
+		input[type="submit"]:hover {
+			background: #1abc9c;
+		}
+		#footer a:hover {
+			color: #1abc9c;
+		}
+
+		/* For webkit browsers */
+		/*body::-webkit-scrollbar {
+		    width: 0.3rem;
 		}
 
 		body::-webkit-scrollbar-track {
@@ -32,14 +56,13 @@
 		}
 
 		body::-webkit-scrollbar-thumb {
-		  background-color: rgba(255,255,255,0.7);
-			border-radius: 0.25rem;
-		  /*outline: 1px solid slategrey;*/
-		}
+		  background: rgba(255,255,255,0.7);
+			border-radius: 0.15rem;
+		}*/
 		</style>
 	</head>
 	<body>
-		<canvas style="position:fixed;top:0;bottom:0;z-index:-1;"></canvas>
+
 		<!-- Header -->
 			<section id="header">
 				<header>
@@ -61,7 +84,7 @@
 					It teaches people to transcend and learn how to lead an excellent lifestyle.
 				</p>
 				<footer>
-					<a href="#first" class="button style2 scrolly">Even more</a>
+					<a href="#first" class="button style2 scrolly">Know even more</a>
 				</footer>
 			</section>
 
@@ -102,7 +125,7 @@
 					<h2>Source of the Light</h2>
 					<p>
 						All the articles on <em>The Light</em> are taken from the<br/>
-						books of <a href="#"><strong>Pt. Shriram Sharma</strong></a>.
+						books by <a href="#"><strong>Pt. Shriram Sharma</strong></a> and others.
 					</p>
 				</header>
 				<div class="inner gallery">
@@ -127,12 +150,15 @@
 					<h2>Send us a message</h2>
 					<p>Have any questions? All you have to do is ask</p>
 				</header>
-				<form method="post" action="#">
+				<form method="post" action="http://formspree.io/genesis.pvt.ltd00@gmail.com">
 					<div class="row 50%">
-						<div class="6u 12u$(mobile)"><input type="text" class="text" name="name" placeholder="Name" /></div>
-						<div class="6u$ 12u$(mobile)"><input type="text" class="text" name="email" placeholder="Email" /></div>
+						<div class="6u 12u$(mobile)"><input type="text" class="text" name="name" placeholder="Name" required /></div>
+						<div class="6u$ 12u$(mobile)"><input type="text" class="text" name="_replyto" placeholder="Email" required /></div>
+						<input type="hidden" name="_subject" value="New Message for The Light Today!" />
+						<input type="hidden" name="_next" value="//thelight.co.in/#thankyou" />
+						<input type="text" name="_gotcha" style="display:none" />
 						<div class="12u$">
-							<textarea name="message" placeholder="Message"></textarea>
+							<textarea name="message" placeholder="Message" required></textarea>
 						</div>
 						<div class="12u$">
 							<ul class="actions">
@@ -324,7 +350,6 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/bg-anim.js"></script>
 
 	</body>
 </html>
